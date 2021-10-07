@@ -4,7 +4,8 @@
     "dependencies": {
         "device": "*",
         "arcade-background-scroll": "github:microsoft/arcade-background-scroll#ef27275c570030c09dd1b9e0db2f63a8844b0848",
-        "controller": "*"
+        "controller": "*",
+        "animation": "*"
     },
     "files": [
         "main.blocks",

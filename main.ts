@@ -42,10 +42,27 @@ controller.player1.onButtonEvent(ControllerButton.B, ControllerButtonEvent.Press
     true
     )
 })
+// Quand joueur percute les Calzone
+sprites.onOverlap(SpriteKind.Player, SpriteKind.EnemyCalzone, function (sprite, otherSprite) {
+    sprite.setPosition(sprite.x+20, sprite.y)
+    otherSprite.setPosition(otherSprite.x-20, otherSprite.y)
+    animation.runMovementAnimation(
+        sprite,
+        animation.animationPresets(animation.shake),
+        200,
+        false
+    )
+    animation.runMovementAnimation(
+        otherSprite,
+        animation.animationPresets(animation.shake),
+        200,
+        false
+    )
+})
 // Quand joueur tire sur les Calzone
 sprites.onOverlap(SpriteKind.ProjectileTiramisuPlayer, SpriteKind.EnemyCalzone, function (sprite, otherSprite) {
     sprite.destroy()
-    otherSprite.destroy(effects.spray, 500)
+    otherSprite.destroy(effects.disintegrate, 200)
     seuilPopCalzone = 5
 })
 // Livraison de pizza
@@ -62,7 +79,7 @@ let Calzone: Sprite = null
 let touchWall = 0
 let Tiramisu: Sprite = null
 let Pizza: Sprite = null
-let seuilPopCalzone = 0
+let seuilPopCalzone = 5
 let yPizza = 0
 let xPizza = 0
 let vyPizza = 0
@@ -77,12 +94,11 @@ yTiramisu = 6
 vyPizza = -50
 xPizza = 13
 yPizza = 19
-let vxBg = -50
-let seuilPopClient = 5
-seuilPopCalzone = 8
+let vxBg = -75
+let seuilPopClient = 6
 let yBarrier = 43
 let castTiramisu
-let seuilCastTiramisu = 6
+let seuilCastTiramisu = 5
 // Intro
 scene.setBackgroundColor(8)
 game.splash("Les Livreurs de l'Extrême", "contre le clan Calzone")
@@ -134,7 +150,7 @@ game.onUpdateInterval(3000, function () {
     popClient = randint(0, 10)
     if (popClient < seuilPopClient) {
         Client = sprites.create(assets.image`Client`, SpriteKind.Clientpizza)
-        Client.setPosition(160, 38)
+        Client.setPosition(160, 24)
         Client.setVelocity(vxBg, 0)
         Client.setFlag(SpriteFlag.AutoDestroy, true)
     }
@@ -160,7 +176,7 @@ game.onUpdateInterval(3000, function () {
     }
     castTiramisu = randint(0, 10)
     if (castTiramisu < seuilCastTiramisu) {
-        if (Calzone.y < Livreur.y - Livreur.y * 5 / 100 && Calzone.y < Livreur.y + Livreur.y * 5 / 100) {
+        if (Calzone.y < (Livreur.y - (Livreur.y * 5 / 100)) && Calzone.y < (Livreur.y + (Livreur.y * 5 / 100))) {
             Tiramisu = sprites.create(assets.image`tiramisu`, SpriteKind.ProjectileTiramisu)
             Tiramisu.setPosition(Calzone.x + 20, Calzone.y)
             if (Livreur.x < Calzone.x) {
