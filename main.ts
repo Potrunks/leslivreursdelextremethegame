@@ -6,17 +6,43 @@ namespace SpriteKind {
     export const ClientLivre = SpriteKind.create()
     export const EnemyCalzone = SpriteKind.create()
 }
+namespace StatusBarKind {
+    export const PizzaFuel = StatusBarKind.create()
+    export const TiramisuFuel = StatusBarKind.create()
+}
 // Player projectile
 controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    Pizza = sprites.create(assets.image`pizza`, SpriteKind.ProjectilePizza)
-    Pizza.setPosition(Livreur.x - xPizza, Livreur.y - yPizza)
-    Pizza.setVelocity(0, vyPizza)
-    Pizza.setFlag(SpriteFlag.AutoDestroy, true)
-    animation.runImageAnimation(
-    Pizza,
-    assets.animation`pizzaAnim`,
+    if (statusBarOfPizza.value == 0) {
+        music.buzzer.play()
+    } else {
+        Pizza = sprites.create(assets.image`pizza`, SpriteKind.ProjectilePizza)
+        Pizza.setPosition(Livreur.x - xPizza, Livreur.y - yPizza)
+        Pizza.setVelocity(0, vyPizza)
+        Pizza.setFlag(SpriteFlag.AutoDestroy, true)
+        animation.runImageAnimation(
+        Pizza,
+        assets.animation`pizzaAnim`,
+        200,
+        true
+        )
+        statusBarOfPizza.value += -1
+    }
+})
+// Quand joueur percute les Calzone
+sprites.onOverlap(SpriteKind.Player, SpriteKind.EnemyCalzone, function (sprite, otherSprite) {
+    sprite.setPosition(sprite.x + 20, sprite.y)
+    otherSprite.setPosition(otherSprite.x - 20, otherSprite.y)
+    animation.runMovementAnimation(
+    sprite,
+    animation.animationPresets(animation.shake),
     200,
-    true
+    false
+    )
+    animation.runMovementAnimation(
+    otherSprite,
+    animation.animationPresets(animation.shake),
+    200,
+    false
     )
 })
 // Quand les Calzone tire sur le Joueur
@@ -30,40 +56,28 @@ sprites.onOverlap(SpriteKind.ProjectileTiramisu, SpriteKind.Player, function (sp
     )
     info.changeLifeBy(-1)
 })
-controller.player1.onButtonEvent(ControllerButton.B, ControllerButtonEvent.Pressed, function () {
-    Tiramisu = sprites.create(assets.image`tiramisu`, SpriteKind.ProjectileTiramisuPlayer)
-    Tiramisu.setPosition(Livreur.x - xTiramisu, Livreur.y - yTiramisu)
-    Tiramisu.setVelocity(vxTiramisu, 0)
-    Tiramisu.setFlag(SpriteFlag.AutoDestroy, true)
-    animation.runImageAnimation(
-    Tiramisu,
-    assets.animation`tiramisuAnim`,
-    200,
-    true
-    )
-})
-// Quand joueur percute les Calzone
-sprites.onOverlap(SpriteKind.Player, SpriteKind.EnemyCalzone, function (sprite, otherSprite) {
-    sprite.setPosition(sprite.x+20, sprite.y)
-    otherSprite.setPosition(otherSprite.x-20, otherSprite.y)
-    animation.runMovementAnimation(
-        sprite,
-        animation.animationPresets(animation.shake),
-        200,
-        false
-    )
-    animation.runMovementAnimation(
-        otherSprite,
-        animation.animationPresets(animation.shake),
-        200,
-        false
-    )
-})
 // Quand joueur tire sur les Calzone
 sprites.onOverlap(SpriteKind.ProjectileTiramisuPlayer, SpriteKind.EnemyCalzone, function (sprite, otherSprite) {
     sprite.destroy()
-    otherSprite.destroy(effects.disintegrate, 200)
+    otherSprite.destroy(effects.spray, 200)
     seuilPopCalzone = 5
+})
+controller.player1.onButtonEvent(ControllerButton.B, ControllerButtonEvent.Pressed, function () {
+    if (statusBarOfTiramisu.value == 0) {
+        music.buzzer.play()
+    } else {
+        Tiramisu = sprites.create(assets.image`tiramisu`, SpriteKind.ProjectileTiramisuPlayer)
+        Tiramisu.setPosition(Livreur.x - xTiramisu, Livreur.y - yTiramisu)
+        Tiramisu.setVelocity(vxTiramisu, 0)
+        Tiramisu.setFlag(SpriteFlag.AutoDestroy, true)
+        animation.runImageAnimation(
+        Tiramisu,
+        assets.animation`tiramisuAnim`,
+        200,
+        true
+        )
+        statusBarOfTiramisu.value += -1
+    }
 })
 // Livraison de pizza
 sprites.onOverlap(SpriteKind.ProjectilePizza, SpriteKind.Clientpizza, function (sprite, otherSprite) {
@@ -79,15 +93,18 @@ let Calzone: Sprite = null
 let touchWall = 0
 let Tiramisu: Sprite = null
 let Pizza: Sprite = null
-let seuilPopCalzone = 5
+let statusBarOfTiramisu: StatusBarSprite = null
+let statusBarOfPizza: StatusBarSprite = null
 let yPizza = 0
 let xPizza = 0
 let vyPizza = 0
 let yTiramisu = 0
 let xTiramisu = 0
 let vxTiramisu = 0
+let seuilPopCalzone = 0
 let clientLivre = 0
 let Livreur: Sprite = null
+seuilPopCalzone = 5
 vxTiramisu = -50
 xTiramisu = 17
 yTiramisu = 6
@@ -128,6 +145,16 @@ assets.animation`scooterAnim`,
 true
 )
 controller.moveSprite(Livreur, 50, 50)
+statusBarOfPizza = statusbars.create(10, 2, StatusBarKind.PizzaFuel)
+statusBarOfPizza.attachToSprite(Livreur)
+statusBarOfPizza.setOffsetPadding(-25, -35)
+statusBarOfPizza.setColor(5, 2)
+statusBarOfPizza.max = 3
+statusBarOfTiramisu = statusbars.create(10, 2, StatusBarKind.TiramisuFuel)
+statusBarOfTiramisu.attachToSprite(Livreur)
+statusBarOfTiramisu.setOffsetPadding(-25, -30)
+statusBarOfTiramisu.setColor(14, 2)
+statusBarOfTiramisu.max = 3
 // Pour empecher le joueur et enemy d'aller au dela de la rambarde
 game.onUpdate(function () {
     if (Livreur.y <= yBarrier) {
@@ -155,6 +182,11 @@ game.onUpdateInterval(3000, function () {
         Client.setFlag(SpriteFlag.AutoDestroy, true)
     }
 })
+// Re-Fuel des jauges Pizza et Tiramisu
+game.onUpdateInterval(3000, function () {
+    statusBarOfPizza.value += 1
+    statusBarOfTiramisu.value += 1
+})
 // pop Calzone (toutes les 3sec si joueur en face des calzone, tiramisu tiré par les calzone)
 game.onUpdateInterval(3000, function () {
     popCalzone = randint(0, 10)
@@ -168,15 +200,16 @@ game.onUpdateInterval(3000, function () {
         true
         )
         seuilPopCalzone = 0
+        Livreur.sayText("Les Calzone !!!", 1000, false)
     }
     if (Calzone.x > Livreur.x - 25) {
         Calzone.setVelocity(-25, randint(-25, 25))
     } else {
-        Calzone.setVelocity(20, randint(-20, 20))
+        Calzone.setVelocity(15, randint(-25, 25))
     }
     castTiramisu = randint(0, 10)
     if (castTiramisu < seuilCastTiramisu) {
-        if (Calzone.y < (Livreur.y - (Livreur.y * 5 / 100)) && Calzone.y < (Livreur.y + (Livreur.y * 5 / 100))) {
+        if (Calzone.y < Livreur.y - Livreur.y * 5 / 100 && Calzone.y < Livreur.y + Livreur.y * 5 / 100) {
             Tiramisu = sprites.create(assets.image`tiramisu`, SpriteKind.ProjectileTiramisu)
             Tiramisu.setPosition(Calzone.x + 20, Calzone.y)
             if (Livreur.x < Calzone.x) {
