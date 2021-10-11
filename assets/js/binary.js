@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.6.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.1.1","target":"arcade","targetVersion":"1.6.24","repo":"potrunks/leslivreursdelextremethegame"}
-// total=1969734 new=8.07% cached=86.54% other=5.39%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.6.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.1.0","target":"arcade","targetVersion":"1.6.24","repo":"potrunks/leslivreursdelextremethegame"}
+// total=1969258 new=8.04% cached=86.56% other=5.40%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -560,7 +560,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P211130(s) {
+function _main___P191419(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1074,68 +1074,68 @@ switch (step) {
     s.callLocIdx = 73; s.pc = 52; return s.tmp_0;
   case 52:
     r0 = s.retval;
-    globals.Clientpizza___210264 = (r0);
+    globals.Clientpizza___190845 = (r0);
     s.tmp_0 = SpriteKind_create__P135998_mk(s);
     s.callLocIdx = 74; s.pc = 53; return s.tmp_0;
   case 53:
     r0 = s.retval;
-    globals.ProjectilePizza___210267 = (r0);
+    globals.ProjectilePizza___190848 = (r0);
     s.tmp_0 = SpriteKind_create__P135998_mk(s);
     s.callLocIdx = 75; s.pc = 54; return s.tmp_0;
   case 54:
     r0 = s.retval;
-    globals.ProjectileTiramisu___210270 = (r0);
+    globals.ProjectileTiramisu___190851 = (r0);
     s.tmp_0 = SpriteKind_create__P135998_mk(s);
     s.callLocIdx = 76; s.pc = 55; return s.tmp_0;
   case 55:
     r0 = s.retval;
-    globals.ProjectileTiramisuPlayer___210273 = (r0);
+    globals.ProjectileTiramisuPlayer___190854 = (r0);
     s.tmp_0 = SpriteKind_create__P135998_mk(s);
     s.callLocIdx = 77; s.pc = 56; return s.tmp_0;
   case 56:
     r0 = s.retval;
-    globals.ClientLivre___210276 = (r0);
+    globals.ClientLivre___190857 = (r0);
     s.tmp_0 = SpriteKind_create__P135998_mk(s);
     s.callLocIdx = 78; s.pc = 57; return s.tmp_0;
   case 57:
     r0 = s.retval;
-    globals.EnemyCalzone___210279 = (r0);
+    globals.EnemyCalzone___190860 = (r0);
     s.tmp_0 = StatusBarKind_create__P138054_mk(s);
     s.callLocIdx = 79; s.pc = 58; return s.tmp_0;
   case 58:
     r0 = s.retval;
-    globals.PizzaFuel___210282 = (r0);
+    globals.PizzaFuel___190863 = (r0);
     s.tmp_0 = StatusBarKind_create__P138054_mk(s);
     s.callLocIdx = 80; s.pc = 59; return s.tmp_0;
   case 59:
     r0 = s.retval;
-    globals.TiramisuFuel___210285 = (r0);
+    globals.TiramisuFuel___190866 = (r0);
     s.tmp_0 = controller_Controller_onButtonEvent__P135735_mk(s);
     s.tmp_0.arg0 = globals.player1___135707;
     s.tmp_0.arg1 = 5;
     s.tmp_0.arg2 = 2049;
-    s.tmp_0.arg3 = inline__P210291;
+    s.tmp_0.arg3 = inline__P190872;
     s.callLocIdx = 94; s.pc = 60; return s.tmp_0;
   case 60:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P135977_mk(s);
     s.tmp_0.arg0 = globals.Player___135999;
-    s.tmp_0.arg1 = globals.EnemyCalzone___210279;
-    s.tmp_0.arg2 = inline__P210343;
+    s.tmp_0.arg1 = globals.EnemyCalzone___190860;
+    s.tmp_0.arg2 = inline__P190924;
     s.callLocIdx = 105; s.pc = 61; return s.tmp_0;
   case 61:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P135977_mk(s);
-    s.tmp_0.arg0 = globals.ProjectileTiramisu___210270;
+    s.tmp_0.arg0 = globals.ProjectileTiramisu___190851;
     s.tmp_0.arg1 = globals.Player___135999;
-    s.tmp_0.arg2 = inline__P210372;
+    s.tmp_0.arg2 = inline__P190953;
     s.callLocIdx = 110; s.pc = 62; return s.tmp_0;
   case 62:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P135977_mk(s);
-    s.tmp_0.arg0 = globals.ProjectileTiramisuPlayer___210273;
-    s.tmp_0.arg1 = globals.EnemyCalzone___210279;
-    s.tmp_0.arg2 = inline__P210389;
+    s.tmp_0.arg0 = globals.ProjectileTiramisuPlayer___190854;
+    s.tmp_0.arg1 = globals.EnemyCalzone___190860;
+    s.tmp_0.arg2 = inline__P190970;
     s.callLocIdx = 113; s.pc = 63; return s.tmp_0;
   case 63:
     r0 = s.retval;
@@ -1143,44 +1143,45 @@ switch (step) {
     s.tmp_0.arg0 = globals.player1___135707;
     s.tmp_0.arg1 = 6;
     s.tmp_0.arg2 = 2049;
-    s.tmp_0.arg3 = inline__P210406;
+    s.tmp_0.arg3 = inline__P190987;
     s.callLocIdx = 127; s.pc = 64; return s.tmp_0;
   case 64:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P135977_mk(s);
-    s.tmp_0.arg0 = globals.ProjectilePizza___210267;
-    s.tmp_0.arg1 = globals.Clientpizza___210264;
-    s.tmp_0.arg2 = inline__P210456;
+    s.tmp_0.arg0 = globals.ProjectilePizza___190848;
+    s.tmp_0.arg1 = globals.Clientpizza___190845;
+    s.tmp_0.arg2 = inline__P191037;
     s.callLocIdx = 133; s.pc = 65; return s.tmp_0;
   case 65:
     r0 = s.retval;
-    globals.popCalzone___210472 = (0);
-    globals.Client___210474 = (null);
-    globals.popClient___210476 = (0);
-    globals.Calzone___210478 = (null);
-    globals.touchWall___210480 = (0);
-    globals.Tiramisu___210415 = (null);
-    globals.Pizza___210300 = (null);
-    globals.statusBarOfTiramisu___210410 = (null);
-    globals.statusBarOfPizza___210295 = (null);
-    globals.yPizza___210320 = (0);
-    globals.xPizza___210314 = (0);
-    globals.vyPizza___210325 = (0);
-    globals.yTiramisu___210433 = (0);
-    globals.xTiramisu___210427 = (0);
-    globals.vxTiramisu___210438 = (0);
-    globals.seuilPopCalzone___210400 = (6);
-    globals.Livreur___210311 = (null);
-    globals.vxTiramisu___210438 = (-50);
-    globals.xTiramisu___210427 = (17);
-    globals.yTiramisu___210433 = (6);
-    globals.vyPizza___210325 = (-50);
-    globals.xPizza___210314 = (13);
-    globals.yPizza___210320 = (19);
-    globals.vxBg___210495 = (-75);
-    globals.seuilPopClient___210497 = (6);
-    globals.yBarrier___210499 = (43);
-    globals.seuilCastTiramisu___210502 = (6);
+    globals.popCalzone___191053 = (0);
+    globals.Client___191055 = (null);
+    globals.popClient___191057 = (0);
+    globals.Calzone___191059 = (null);
+    globals.touchWall___191061 = (0);
+    globals.Tiramisu___190996 = (null);
+    globals.Pizza___190881 = (null);
+    globals.statusBarOfTiramisu___190991 = (null);
+    globals.statusBarOfPizza___190876 = (null);
+    globals.yPizza___190901 = (0);
+    globals.xPizza___190895 = (0);
+    globals.vyPizza___190906 = (0);
+    globals.yTiramisu___191014 = (0);
+    globals.xTiramisu___191008 = (0);
+    globals.vxTiramisu___191019 = (0);
+    globals.seuilPopCalzone___190981 = (0);
+    globals.Livreur___190892 = (null);
+    globals.seuilPopCalzone___190981 = (5);
+    globals.vxTiramisu___191019 = (-50);
+    globals.xTiramisu___191008 = (17);
+    globals.yTiramisu___191014 = (6);
+    globals.vyPizza___190906 = (-50);
+    globals.xPizza___190895 = (13);
+    globals.yPizza___190901 = (19);
+    globals.vxBg___191077 = (-75);
+    globals.seuilPopClient___191079 = (6);
+    globals.yBarrier___191081 = (43);
+    globals.seuilCastTiramisu___191084 = (5);
     s.tmp_0 = scene_setBackgroundColor__P136326_mk(s);
     s.tmp_0.arg0 = 8;
     s.callLocIdx = 134; s.pc = 66; return s.tmp_0;
@@ -1235,7 +1236,7 @@ switch (step) {
   case 74:
     r0 = s.retval;
     s.tmp_0 = info_startCountdown__P136088_mk(s);
-    s.tmp_0.arg0 = 60;
+    s.tmp_0.arg0 = 30;
     s.callLocIdx = 143; s.pc = 75; return s.tmp_0;
   case 75:
     r0 = s.retval;
@@ -1255,7 +1256,7 @@ switch (step) {
   case 77:
     r0 = s.retval;
     s.tmp_0 = scroller_scrollBackgroundWithSpeed__P137665_mk(s);
-    s.tmp_0.arg0 = globals.vxBg___210495;
+    s.tmp_0.arg0 = globals.vxBg___191077;
     s.tmp_0.arg1 = 0;
     s.callLocIdx = 147; s.pc = 79; return s.tmp_0;
   case 79:
@@ -1271,22 +1272,22 @@ switch (step) {
     s.callLocIdx = 149; s.pc = 80; return s.tmp_0;
   case 80:
     r0 = s.retval;
-    globals.Livreur___210311 = (r0);
+    globals.Livreur___190892 = (r0);
     s.tmp_0 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_0.arg0 = globals.Livreur___210311;
+    s.tmp_0.arg0 = globals.Livreur___190892;
     s.tmp_0.arg1 = 81;
     s.tmp_0.arg2 = 100;
     s.callLocIdx = 150; s.pc = 82; return s.tmp_0;
   case 82:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P135948_mk(s);
-    s.tmp_0.arg0 = globals.Livreur___210311;
+    s.tmp_0.arg0 = globals.Livreur___190892;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 151; s.pc = 83; return s.tmp_0;
   case 83:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P136781_mk(s);
-    s.tmp_0.arg0 = globals.Livreur___210311;
+    s.tmp_0.arg0 = globals.Livreur___190892;
     s.tmp_1 = helpers_getAnimationByName__P136732_mk(s);
     s.tmp_1.arg0 = "scooterAnim";
     s.callLocIdx = 152; s.pc = 85; return s.tmp_1;
@@ -1300,7 +1301,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = controller_Controller_moveSprite__P135734_mk(s);
     s.tmp_0.arg0 = globals.player2___135704;
-    s.tmp_0.arg1 = globals.Livreur___210311;
+    s.tmp_0.arg1 = globals.Livreur___190892;
     s.tmp_0.arg2 = 50;
     s.tmp_0.arg3 = 50;
     s.callLocIdx = 154; s.pc = 86; return s.tmp_0;
@@ -1309,28 +1310,28 @@ switch (step) {
     s.tmp_0 = statusbars_create__P138115_mk(s);
     s.tmp_0.arg0 = 10;
     s.tmp_0.arg1 = 2;
-    s.tmp_0.arg2 = globals.PizzaFuel___210282;
+    s.tmp_0.arg2 = globals.PizzaFuel___190863;
     s.callLocIdx = 155; s.pc = 87; return s.tmp_0;
   case 87:
     r0 = s.retval;
-    globals.statusBarOfPizza___210295 = (r0);
+    globals.statusBarOfPizza___190876 = (r0);
     s.tmp_0 = StatusBarSprite_attachToSprite__P138065_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfPizza___210295;
-    s.tmp_0.arg1 = globals.Livreur___210311;
+    s.tmp_0.arg0 = globals.statusBarOfPizza___190876;
+    s.tmp_0.arg1 = globals.Livreur___190892;
     s.tmp_0.arg2 = undefined;
     s.tmp_0.arg3 = undefined;
     s.callLocIdx = 156; s.pc = 88; return s.tmp_0;
   case 88:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_setOffsetPadding__P138073_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfPizza___210295;
+    s.tmp_0.arg0 = globals.statusBarOfPizza___190876;
     s.tmp_0.arg1 = -25;
     s.tmp_0.arg2 = -35;
     s.callLocIdx = 157; s.pc = 89; return s.tmp_0;
   case 89:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_setColor__P138067_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfPizza___210295;
+    s.tmp_0.arg0 = globals.statusBarOfPizza___190876;
     s.tmp_0.arg1 = 5;
     s.tmp_0.arg2 = 2;
     s.tmp_0.arg3 = undefined;
@@ -1338,7 +1339,7 @@ switch (step) {
   case 90:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_max__P138064_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfPizza___210295;
+    s.tmp_0.arg0 = globals.statusBarOfPizza___190876;
     s.tmp_0.arg1 = 3;
     s.callLocIdx = 159; s.pc = 91; return s.tmp_0;
   case 91:
@@ -1346,28 +1347,28 @@ switch (step) {
     s.tmp_0 = statusbars_create__P138115_mk(s);
     s.tmp_0.arg0 = 10;
     s.tmp_0.arg1 = 2;
-    s.tmp_0.arg2 = globals.TiramisuFuel___210285;
+    s.tmp_0.arg2 = globals.TiramisuFuel___190866;
     s.callLocIdx = 160; s.pc = 92; return s.tmp_0;
   case 92:
     r0 = s.retval;
-    globals.statusBarOfTiramisu___210410 = (r0);
+    globals.statusBarOfTiramisu___190991 = (r0);
     s.tmp_0 = StatusBarSprite_attachToSprite__P138065_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfTiramisu___210410;
-    s.tmp_0.arg1 = globals.Livreur___210311;
+    s.tmp_0.arg0 = globals.statusBarOfTiramisu___190991;
+    s.tmp_0.arg1 = globals.Livreur___190892;
     s.tmp_0.arg2 = undefined;
     s.tmp_0.arg3 = undefined;
     s.callLocIdx = 161; s.pc = 93; return s.tmp_0;
   case 93:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_setOffsetPadding__P138073_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfTiramisu___210410;
+    s.tmp_0.arg0 = globals.statusBarOfTiramisu___190991;
     s.tmp_0.arg1 = -25;
     s.tmp_0.arg2 = -30;
     s.callLocIdx = 162; s.pc = 94; return s.tmp_0;
   case 94:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_setColor__P138067_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfTiramisu___210410;
+    s.tmp_0.arg0 = globals.statusBarOfTiramisu___190991;
     s.tmp_0.arg1 = 14;
     s.tmp_0.arg2 = 2;
     s.tmp_0.arg3 = undefined;
@@ -1375,51 +1376,45 @@ switch (step) {
   case 95:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_max__P138064_mk(s);
-    s.tmp_0.arg0 = globals.statusBarOfTiramisu___210410;
+    s.tmp_0.arg0 = globals.statusBarOfTiramisu___190991;
     s.tmp_0.arg1 = 3;
     s.callLocIdx = 164; s.pc = 96; return s.tmp_0;
   case 96:
     r0 = s.retval;
     s.tmp_0 = game_onUpdate__P136420_mk(s);
-    s.tmp_0.arg0 = inline__P210575;
+    s.tmp_0.arg0 = inline__P191157;
     s.callLocIdx = 174; s.pc = 97; return s.tmp_0;
   case 97:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P136421_mk(s);
-    s.tmp_0.arg0 = 2000;
-    s.tmp_0.arg1 = inline__P210606;
+    s.tmp_0.arg0 = 1000;
+    s.tmp_0.arg1 = inline__P191188;
     s.callLocIdx = 180; s.pc = 98; return s.tmp_0;
   case 98:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P136421_mk(s);
     s.tmp_0.arg0 = 5000;
-    s.tmp_0.arg1 = inline__P210627;
+    s.tmp_0.arg1 = inline__P191209;
     s.callLocIdx = 185; s.pc = 99; return s.tmp_0;
   case 99:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P136421_mk(s);
-    s.tmp_0.arg0 = 1000;
-    s.tmp_0.arg1 = inline__P210639;
-    s.callLocIdx = 204; s.pc = 100; return s.tmp_0;
-  case 100:
-    r0 = s.retval;
-    s.tmp_0 = game_onUpdateInterval__P136421_mk(s);
     s.tmp_0.arg0 = 2000;
-    s.tmp_0.arg1 = inline__P210700;
-    s.callLocIdx = 216; s.pc = 101; return s.tmp_0;
-  case 101:
+    s.tmp_0.arg1 = inline__P191221;
+    s.callLocIdx = 217; s.pc = 100; return s.tmp_0;
+  case 100:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P211130.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P211130.continuations = [ 45,46,47,48 ]
+_main___P191419.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P191419.continuations = [ 45,46,47,48 ]
 
-function _main___P211130_mk(s) {
+function _main___P191419_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P211130, depth: s.depth + 1,
+        parent: s, fn: _main___P191419, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2149,7 +2144,7 @@ function myTiles_inline__P140821_mk(s) {
 
 
 
-function inline__P210291(s) {
+function inline__P190872(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2160,7 +2155,7 @@ switch (step) {
   case 0:
 
     s.tmp_2 = StatusBarSprite_value__P138061_mk(s);
-    s.tmp_2.arg0 = globals.statusBarOfPizza___210295;
+    s.tmp_2.arg0 = globals.statusBarOfPizza___190876;
     s.callLocIdx = 81; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
@@ -2184,48 +2179,48 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.ProjectilePizza___210267;
+    s.tmp_0.arg1 = globals.ProjectilePizza___190848;
     s.callLocIdx = 84; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    globals.Pizza___210300 = (r0);
+    globals.Pizza___190881 = (r0);
     s.tmp_0 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_0.arg0 = globals.Pizza___210300;
+    s.tmp_0.arg0 = globals.Pizza___190881;
     s.tmp_2 = Sprite_x__P135893_mk(s);
-    s.tmp_2.arg0 = globals.Livreur___210311;
+    s.tmp_2.arg0 = globals.Livreur___190892;
     s.callLocIdx = 85; s.pc = 8; return s.tmp_2;
   case 8:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 - globals.xPizza___210314);
+    r0 = (s.tmp_1 - globals.xPizza___190895);
     s.tmp_0.arg1 = r0;
     s.tmp_4 = Sprite_y__P135895_mk(s);
-    s.tmp_4.arg0 = globals.Livreur___210311;
+    s.tmp_4.arg0 = globals.Livreur___190892;
     s.callLocIdx = 86; s.pc = 9; return s.tmp_4;
   case 9:
     r0 = s.retval;
     s.tmp_3 = r0;
-    r0 = (s.tmp_3 - globals.yPizza___210320);
+    r0 = (s.tmp_3 - globals.yPizza___190901);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 87; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_0.arg0 = globals.Pizza___210300;
+    s.tmp_0.arg0 = globals.Pizza___190881;
     s.tmp_0.arg1 = 0;
-    s.tmp_0.arg2 = globals.vyPizza___210325;
+    s.tmp_0.arg2 = globals.vyPizza___190906;
     s.callLocIdx = 88; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P135950_mk(s);
-    s.tmp_0.arg0 = globals.Pizza___210300;
+    s.tmp_0.arg0 = globals.Pizza___190881;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 89; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P136781_mk(s);
-    s.tmp_0.arg0 = globals.Pizza___210300;
+    s.tmp_0.arg0 = globals.Pizza___190881;
     s.tmp_1 = helpers_getAnimationByName__P136732_mk(s);
     s.tmp_1.arg0 = "pizzaAnim";
     s.callLocIdx = 90; s.pc = 13; return s.tmp_1;
@@ -2238,7 +2233,7 @@ switch (step) {
   case 12:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P138062_mk(s);
-    s.tmp_1 = r0 = globals.statusBarOfPizza___210295;
+    s.tmp_1 = r0 = globals.statusBarOfPizza___190876;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P138061_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
@@ -2256,12 +2251,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210291.info = {"start":596,"length":499,"line":13,"column":84,"endLine":29,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P190872.info = {"start":596,"length":499,"line":13,"column":84,"endLine":29,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P210291_mk(s) {
+function inline__P190872_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210291, depth: s.depth + 1,
+        parent: s, fn: inline__P190872, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2274,7 +2269,7 @@ function inline__P210291_mk(s) {
 
 
 
-function inline__P210343(s) {
+function inline__P190924(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2349,12 +2344,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210343.info = {"start":1195,"length":394,"line":31,"column":62,"endLine":46,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P190924.info = {"start":1195,"length":394,"line":31,"column":62,"endLine":46,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P210343_mk(s) {
+function inline__P190924_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210343, depth: s.depth + 1,
+        parent: s, fn: inline__P190924, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2368,7 +2363,7 @@ function inline__P210343_mk(s) {
 
 
 
-function inline__P210372(s) {
+function inline__P190953(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2408,12 +2403,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210372.info = {"start":1699,"length":208,"line":48,"column":68,"endLine":57,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P190953.info = {"start":1699,"length":208,"line":48,"column":68,"endLine":57,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P210372_mk(s) {
+function inline__P190953_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210372, depth: s.depth + 1,
+        parent: s, fn: inline__P190953, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2424,7 +2419,7 @@ function inline__P210372_mk(s) {
 
 
 
-function inline__P210389(s) {
+function inline__P190970(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2453,17 +2448,17 @@ switch (step) {
     s.callLocIdx = 112; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    globals.seuilPopCalzone___210400 = (5);
+    globals.seuilPopCalzone___190981 = (5);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210389.info = {"start":2026,"length":123,"line":59,"column":80,"endLine":63,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P190970.info = {"start":2026,"length":123,"line":59,"column":80,"endLine":63,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P210389_mk(s) {
+function inline__P190970_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210389, depth: s.depth + 1,
+        parent: s, fn: inline__P190970, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2474,7 +2469,7 @@ function inline__P210389_mk(s) {
 
 
 
-function inline__P210406(s) {
+function inline__P190987(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2485,7 +2480,7 @@ switch (step) {
   case 0:
 
     s.tmp_2 = StatusBarSprite_value__P138061_mk(s);
-    s.tmp_2.arg0 = globals.statusBarOfTiramisu___210410;
+    s.tmp_2.arg0 = globals.statusBarOfTiramisu___190991;
     s.callLocIdx = 114; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
@@ -2509,48 +2504,48 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.ProjectileTiramisuPlayer___210273;
+    s.tmp_0.arg1 = globals.ProjectileTiramisuPlayer___190854;
     s.callLocIdx = 117; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    globals.Tiramisu___210415 = (r0);
+    globals.Tiramisu___190996 = (r0);
     s.tmp_0 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
     s.tmp_2 = Sprite_x__P135893_mk(s);
-    s.tmp_2.arg0 = globals.Livreur___210311;
+    s.tmp_2.arg0 = globals.Livreur___190892;
     s.callLocIdx = 118; s.pc = 8; return s.tmp_2;
   case 8:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 - globals.xTiramisu___210427);
+    r0 = (s.tmp_1 - globals.xTiramisu___191008);
     s.tmp_0.arg1 = r0;
     s.tmp_4 = Sprite_y__P135895_mk(s);
-    s.tmp_4.arg0 = globals.Livreur___210311;
+    s.tmp_4.arg0 = globals.Livreur___190892;
     s.callLocIdx = 119; s.pc = 9; return s.tmp_4;
   case 9:
     r0 = s.retval;
     s.tmp_3 = r0;
-    r0 = (s.tmp_3 - globals.yTiramisu___210433);
+    r0 = (s.tmp_3 - globals.yTiramisu___191014);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 120; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
-    s.tmp_0.arg1 = globals.vxTiramisu___210438;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
+    s.tmp_0.arg1 = globals.vxTiramisu___191019;
     s.tmp_0.arg2 = 0;
     s.callLocIdx = 121; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P135950_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 122; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P136781_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
     s.tmp_1 = helpers_getAnimationByName__P136732_mk(s);
     s.tmp_1.arg0 = "tiramisuAnim";
     s.callLocIdx = 123; s.pc = 13; return s.tmp_1;
@@ -2563,7 +2558,7 @@ switch (step) {
   case 12:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P138062_mk(s);
-    s.tmp_1 = r0 = globals.statusBarOfTiramisu___210410;
+    s.tmp_1 = r0 = globals.statusBarOfTiramisu___190991;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P138061_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
@@ -2581,12 +2576,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210406.info = {"start":2235,"length":544,"line":64,"column":84,"endLine":80,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P190987.info = {"start":2235,"length":544,"line":64,"column":84,"endLine":80,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P210406_mk(s) {
+function inline__P190987_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210406, depth: s.depth + 1,
+        parent: s, fn: inline__P190987, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2599,7 +2594,7 @@ function inline__P210406_mk(s) {
 
 
 
-function inline__P210456(s) {
+function inline__P191037(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2616,7 +2611,7 @@ switch (step) {
     }
     s.tmp_0 = Sprite_setKind__P135939_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    s.tmp_0.arg1 = globals.ClientLivre___210276;
+    s.tmp_0.arg1 = globals.ClientLivre___190857;
     s.callLocIdx = 128; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -2647,12 +2642,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210456.info = {"start":2873,"length":181,"line":82,"column":70,"endLine":87,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P191037.info = {"start":2873,"length":181,"line":82,"column":70,"endLine":87,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P210456_mk(s) {
+function inline__P191037_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210456, depth: s.depth + 1,
+        parent: s, fn: inline__P191037, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2664,7 +2659,7 @@ function inline__P210456_mk(s) {
 
 
 
-function inline__P210575(s) {
+function inline__P191157(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2675,27 +2670,27 @@ switch (step) {
   case 0:
 
     s.tmp_2 = Sprite_y__P135895_mk(s);
-    s.tmp_2.arg0 = globals.Livreur___210311;
+    s.tmp_2.arg0 = globals.Livreur___190892;
     s.callLocIdx = 165; s.pc = 5; return s.tmp_2;
   case 5:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 <= globals.yBarrier___210499);
+    r0 = (s.tmp_1 <= globals.yBarrier___191081);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     s.tmp_3 = Sprite_y__P135896_mk(s);
-    s.tmp_3.arg0 = globals.Livreur___210311;
-    r0 = (globals.yBarrier___210499 + 10);
+    s.tmp_3.arg0 = globals.Livreur___190892;
+    r0 = (globals.yBarrier___191081 + 10);
     s.tmp_4 = r0;
     s.tmp_3.arg1 = r0;
     s.callLocIdx = 167; s.pc = 6; return s.tmp_3;
   case 6:
     r0 = s.retval;
     s.tmp_5 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_5.arg0 = globals.Livreur___210311;
+    s.tmp_5.arg0 = globals.Livreur___190892;
     s.tmp_6 = Sprite_x__P135893_mk(s);
-    s.tmp_6.arg0 = globals.Livreur___210311;
+    s.tmp_6.arg0 = globals.Livreur___190892;
     s.callLocIdx = 166; s.pc = 8; return s.tmp_6;
   case 8:
     r0 = s.retval;
@@ -2705,7 +2700,7 @@ switch (step) {
   case 7:
     r0 = s.retval;
     s.tmp_0 = animation_runMovementAnimation__P136782_mk(s);
-    s.tmp_0.arg0 = globals.Livreur___210311;
+    s.tmp_0.arg0 = globals.Livreur___190892;
     r0 = globals.shake___136789.fields["pathString"];
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 200;
@@ -2719,22 +2714,22 @@ switch (step) {
     s.callLocIdx = 171; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
-    r0 = (globals.touchWall___210480 + 1);
-    globals.touchWall___210480 = (r0);
+    r0 = (globals.touchWall___191061 + 1);
+    globals.touchWall___191061 = (r0);
   case 1:
   case 2:
     s.tmp_2 = Sprite_y__P135895_mk(s);
-    s.tmp_2.arg0 = globals.Calzone___210478;
+    s.tmp_2.arg0 = globals.Calzone___191059;
     s.callLocIdx = 172; s.pc = 11; return s.tmp_2;
   case 11:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 <= globals.yBarrier___210499);
+    r0 = (s.tmp_1 <= globals.yBarrier___191081);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
     s.tmp_3 = Sprite_vy__P135900_mk(s);
-    s.tmp_3.arg0 = globals.Calzone___210478;
+    s.tmp_3.arg0 = globals.Calzone___191059;
     s.tmp_3.arg1 = 25;
     s.callLocIdx = 173; s.pc = 12; return s.tmp_3;
   case 12:
@@ -2745,12 +2740,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210575.info = {"start":5132,"length":383,"line":157,"column":14,"endLine":172,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P191157.info = {"start":5152,"length":383,"line":158,"column":14,"endLine":173,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P210575_mk(s) {
+function inline__P191157_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210575, depth: s.depth + 1,
+        parent: s, fn: inline__P191157, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2765,7 +2760,7 @@ function inline__P210575_mk(s) {
 
 
 
-function inline__P210606(s) {
+function inline__P191188(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2776,8 +2771,8 @@ switch (step) {
   case 0:
 
     r0 = pxsim.Math_.randomRange(0, 10);
-    globals.popClient___210476 = (r0);
-    r0 = (globals.popClient___210476 < globals.seuilPopClient___210497);
+    globals.popClient___191057 = (r0);
+    r0 = (globals.popClient___191057 < globals.seuilPopClient___191079);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -2788,27 +2783,27 @@ switch (step) {
   case 4:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.Clientpizza___210264;
+    s.tmp_1.arg1 = globals.Clientpizza___190845;
     s.callLocIdx = 176; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
-    globals.Client___210474 = (r0);
+    globals.Client___191055 = (r0);
     s.tmp_0 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_0.arg0 = globals.Client___210474;
+    s.tmp_0.arg0 = globals.Client___191055;
     s.tmp_0.arg1 = 160;
     s.tmp_0.arg2 = 24;
     s.callLocIdx = 177; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_0.arg0 = globals.Client___210474;
-    s.tmp_0.arg1 = globals.vxBg___210495;
+    s.tmp_0.arg0 = globals.Client___191055;
+    s.tmp_0.arg1 = globals.vxBg___191077;
     s.tmp_0.arg2 = 0;
     s.callLocIdx = 178; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P135950_mk(s);
-    s.tmp_0.arg0 = globals.Client___210474;
+    s.tmp_0.arg0 = globals.Client___191055;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 179; s.pc = 7; return s.tmp_0;
@@ -2820,12 +2815,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210606.info = {"start":5559,"length":293,"line":174,"column":28,"endLine":182,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P191188.info = {"start":5579,"length":293,"line":175,"column":28,"endLine":183,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P210606_mk(s) {
+function inline__P191188_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210606, depth: s.depth + 1,
+        parent: s, fn: inline__P191188, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2836,7 +2831,7 @@ function inline__P210606_mk(s) {
 
 
 
-function inline__P210627(s) {
+function inline__P191209(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2847,7 +2842,7 @@ switch (step) {
   case 0:
 
     s.tmp_0 = StatusBarSprite_value__P138062_mk(s);
-    s.tmp_1 = r0 = globals.statusBarOfPizza___210295;
+    s.tmp_1 = r0 = globals.statusBarOfPizza___190876;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P138061_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
@@ -2861,7 +2856,7 @@ switch (step) {
   case 1:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P138062_mk(s);
-    s.tmp_1 = r0 = globals.statusBarOfTiramisu___210410;
+    s.tmp_1 = r0 = globals.statusBarOfTiramisu___190991;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P138061_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
@@ -2878,12 +2873,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210627.info = {"start":5922,"length":82,"line":184,"column":28,"endLine":187,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P191209.info = {"start":5942,"length":82,"line":185,"column":28,"endLine":188,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P210627_mk(s) {
+function inline__P191209_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210627, depth: s.depth + 1,
+        parent: s, fn: inline__P191209, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2895,7 +2890,7 @@ function inline__P210627_mk(s) {
 
 
 
-function inline__P210639(s) {
+function inline__P191221(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2906,177 +2901,283 @@ switch (step) {
   case 0:
 
     r0 = pxsim.Math_.randomRange(0, 10);
-    globals.castTiramisu___210500 = (r0);
-    r0 = (globals.castTiramisu___210500 < globals.seuilCastTiramisu___210502);
+    globals.popCalzone___191053 = (r0);
+    r0 = (globals.popCalzone___191053 < globals.seuilPopCalzone___190981);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 11; continue; }
+    if (!r0) { step = 1; continue; }
+    s.tmp_1 = sprites_create__P135835_mk(s);
+    s.tmp_2 = helpers_getImageByName__P136731_mk(s);
+    s.tmp_2.arg0 = "calzone";
+    s.callLocIdx = 186; s.pc = 16; return s.tmp_2;
+  case 16:
+    r0 = s.retval;
+    s.tmp_1.arg0 = r0;
+    s.tmp_1.arg1 = globals.EnemyCalzone___190860;
+    s.callLocIdx = 187; s.pc = 15; return s.tmp_1;
+  case 15:
+    r0 = s.retval;
+    globals.Calzone___191059 = (r0);
+    s.tmp_0 = Sprite_setPosition__P135940_mk(s);
+    s.tmp_0.arg0 = globals.Calzone___191059;
+    s.tmp_0.arg1 = 0;
+    r0 = pxsim.Math_.randomRange(54, 120);
+    s.tmp_0.arg2 = r0;
+    s.callLocIdx = 188; s.pc = 17; return s.tmp_0;
+  case 17:
+    r0 = s.retval;
+    s.tmp_0 = animation_runImageAnimation__P136781_mk(s);
+    s.tmp_0.arg0 = globals.Calzone___191059;
+    s.tmp_1 = helpers_getAnimationByName__P136732_mk(s);
+    s.tmp_1.arg0 = "calzoneAnim";
+    s.callLocIdx = 189; s.pc = 19; return s.tmp_1;
+  case 19:
+    r0 = s.retval;
+    s.tmp_0.arg1 = r0;
+    s.tmp_0.arg2 = 100;
+    s.tmp_0.arg3 = true;
+    s.callLocIdx = 190; s.pc = 18; return s.tmp_0;
+  case 18:
+    r0 = s.retval;
+    globals.seuilPopCalzone___190981 = (0);
+    s.tmp_0 = Sprite_sayText__P135943_mk(s);
+    s.tmp_0.arg0 = globals.Livreur___190892;
+    s.tmp_0.arg1 = "Les Calzone !!!";
+    s.tmp_0.arg2 = 1000;
+    s.tmp_0.arg3 = false;
+    s.tmp_0.arg4 = 15;
+    s.tmp_0.arg5 = 1;
+    s.callLocIdx = 191; s.pc = 20; return s.tmp_0;
+  case 20:
+    r0 = s.retval;
+  case 1:
+  case 2:
+    s.tmp_2 = Sprite_x__P135893_mk(s);
+    s.tmp_2.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 192; s.pc = 21; return s.tmp_2;
+  case 21:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    s.tmp_5 = Sprite_x__P135893_mk(s);
+    s.tmp_5.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 193; s.pc = 22; return s.tmp_5;
+  case 22:
+    r0 = s.retval;
+    s.tmp_4 = r0;
+    r0 = (s.tmp_4 - 25);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_1 > s.tmp_3);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 3; continue; }
+    s.tmp_6 = Sprite_setVelocity__P135941_mk(s);
+    s.tmp_6.arg0 = globals.Calzone___191059;
+    s.tmp_6.arg1 = -25;
+    r0 = pxsim.Math_.randomRange(-25, 25);
+    s.tmp_6.arg2 = r0;
+    s.callLocIdx = 194; s.pc = 23; return s.tmp_6;
+  case 23:
+    r0 = s.retval;
+    { step = 4; continue; }
+  case 3:
+    s.tmp_0 = Sprite_setVelocity__P135941_mk(s);
+    s.tmp_0.arg0 = globals.Calzone___191059;
+    s.tmp_0.arg1 = 15;
+    r0 = pxsim.Math_.randomRange(-25, 25);
+    s.tmp_0.arg2 = r0;
+    s.callLocIdx = 195; s.pc = 24; return s.tmp_0;
+  case 24:
+    r0 = s.retval;
+  case 4:
+    r0 = pxsim.Math_.randomRange(0, 10);
+    globals.castTiramisu___191082 = (r0);
+    r0 = (globals.castTiramisu___191082 < globals.seuilCastTiramisu___191084);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 13; continue; }
     s.tmp_3 = Sprite_y__P135895_mk(s);
-    s.tmp_3.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 186; s.pc = 13; return s.tmp_3;
-  case 13:
+    s.tmp_3.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 196; s.pc = 25; return s.tmp_3;
+  case 25:
     r0 = s.retval;
     s.tmp_2 = r0;
     s.tmp_6 = Sprite_y__P135895_mk(s);
-    s.tmp_6.arg0 = globals.Livreur___210311;
-    s.callLocIdx = 187; s.pc = 14; return s.tmp_6;
-  case 14:
+    s.tmp_6.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 197; s.pc = 26; return s.tmp_6;
+  case 26:
     r0 = s.retval;
     s.tmp_5 = r0;
-    r0 = (s.tmp_5 - 20);
+    s.tmp_10 = Sprite_y__P135895_mk(s);
+    s.tmp_10.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 198; s.pc = 27; return s.tmp_10;
+  case 27:
+    r0 = s.retval;
+    s.tmp_9 = r0;
+    r0 = (s.tmp_9 * 5);
+    s.tmp_8 = r0;
+    r0 = (s.tmp_8 / 100);
+    s.tmp_7 = r0;
+    r0 = (s.tmp_5 - s.tmp_7);
     s.tmp_4 = r0;
-    r0 = (s.tmp_2 > s.tmp_4);
+    r0 = (s.tmp_2 < s.tmp_4);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBool(s.tmp_1);
-    if (r0) { step = 1; continue; }
+    if (r0) { step = 5; continue; }
     r0 = s.tmp_1;
-    { step = 2; continue; }
-  case 1:
-    s.tmp_8 = Sprite_y__P135895_mk(s);
-    s.tmp_8.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 188; s.pc = 15; return s.tmp_8;
-  case 15:
+    { step = 6; continue; }
+  case 5:
+    s.tmp_12 = Sprite_y__P135895_mk(s);
+    s.tmp_12.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 199; s.pc = 28; return s.tmp_12;
+  case 28:
     r0 = s.retval;
-    s.tmp_7 = r0;
-    s.tmp_11 = Sprite_y__P135895_mk(s);
-    s.tmp_11.arg0 = globals.Livreur___210311;
-    s.callLocIdx = 189; s.pc = 16; return s.tmp_11;
-  case 16:
+    s.tmp_11 = r0;
+    s.tmp_15 = Sprite_y__P135895_mk(s);
+    s.tmp_15.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 200; s.pc = 29; return s.tmp_15;
+  case 29:
     r0 = s.retval;
-    s.tmp_10 = r0;
-    r0 = (s.tmp_10 + 20);
-    s.tmp_9 = r0;
-    r0 = (s.tmp_7 < s.tmp_9);
-  case 2:
-    // jmp value (already in r0)
-    s.tmp_12 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_12);
-    if (r0) { step = 3; continue; }
-    r0 = s.tmp_12;
-    { step = 4; continue; }
-  case 3:
-    r0 = (globals.seuilPopCalzone___210400 == 0);
-  case 4:
-    // jmp value (already in r0)
+    s.tmp_14 = r0;
+    s.tmp_19 = Sprite_y__P135895_mk(s);
+    s.tmp_19.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 201; s.pc = 30; return s.tmp_19;
+  case 30:
+    r0 = s.retval;
+    s.tmp_18 = r0;
+    r0 = (s.tmp_18 * 5);
+    s.tmp_17 = r0;
+    r0 = (s.tmp_17 / 100);
+    s.tmp_16 = r0;
+    r0 = (s.tmp_14 + s.tmp_16);
     s.tmp_13 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_13);
-    if (!r0) { step = 9; continue; }
-    s.tmp_14 = sprites_create__P135835_mk(s);
-    s.tmp_15 = helpers_getImageByName__P136731_mk(s);
-    s.tmp_15.arg0 = "tiramisu";
-    s.callLocIdx = 190; s.pc = 18; return s.tmp_15;
-  case 18:
+    r0 = (s.tmp_11 < s.tmp_13);
+  case 6:
+    // jmp value (already in r0)
+    s.tmp_20 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_20);
+    if (!r0) { step = 11; continue; }
+    s.tmp_21 = sprites_create__P135835_mk(s);
+    s.tmp_22 = helpers_getImageByName__P136731_mk(s);
+    s.tmp_22.arg0 = "tiramisu";
+    s.callLocIdx = 202; s.pc = 32; return s.tmp_22;
+  case 32:
     r0 = s.retval;
-    s.tmp_14.arg0 = r0;
-    s.tmp_14.arg1 = globals.ProjectileTiramisu___210270;
-    s.callLocIdx = 191; s.pc = 17; return s.tmp_14;
-  case 17:
+    s.tmp_21.arg0 = r0;
+    s.tmp_21.arg1 = globals.ProjectileTiramisu___190851;
+    s.callLocIdx = 203; s.pc = 31; return s.tmp_21;
+  case 31:
     r0 = s.retval;
-    globals.Tiramisu___210415 = (r0);
+    globals.Tiramisu___190996 = (r0);
     s.tmp_0 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
     s.tmp_2 = Sprite_x__P135893_mk(s);
-    s.tmp_2.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 192; s.pc = 20; return s.tmp_2;
-  case 20:
+    s.tmp_2.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 204; s.pc = 34; return s.tmp_2;
+  case 34:
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 20);
     s.tmp_0.arg1 = r0;
     s.tmp_3 = Sprite_y__P135895_mk(s);
-    s.tmp_3.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 193; s.pc = 21; return s.tmp_3;
-  case 21:
+    s.tmp_3.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 205; s.pc = 35; return s.tmp_3;
+  case 35:
     r0 = s.retval;
     s.tmp_0.arg2 = r0;
-    s.callLocIdx = 194; s.pc = 19; return s.tmp_0;
-  case 19:
+    s.callLocIdx = 206; s.pc = 33; return s.tmp_0;
+  case 33:
     r0 = s.retval;
     s.tmp_2 = Sprite_x__P135893_mk(s);
-    s.tmp_2.arg0 = globals.Livreur___210311;
-    s.callLocIdx = 195; s.pc = 22; return s.tmp_2;
-  case 22:
+    s.tmp_2.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 207; s.pc = 36; return s.tmp_2;
+  case 36:
     r0 = s.retval;
     s.tmp_1 = r0;
     s.tmp_4 = Sprite_x__P135893_mk(s);
-    s.tmp_4.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 196; s.pc = 23; return s.tmp_4;
-  case 23:
+    s.tmp_4.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 208; s.pc = 37; return s.tmp_4;
+  case 37:
     r0 = s.retval;
     s.tmp_3 = r0;
     r0 = (s.tmp_1 < s.tmp_3);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 5; continue; }
+    if (!r0) { step = 7; continue; }
     s.tmp_5 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_5.arg0 = globals.Tiramisu___210415;
+    s.tmp_5.arg0 = globals.Tiramisu___190996;
     s.tmp_5.arg1 = -20;
     s.tmp_5.arg2 = 0;
-    s.callLocIdx = 197; s.pc = 24; return s.tmp_5;
-  case 24:
+    s.callLocIdx = 209; s.pc = 38; return s.tmp_5;
+  case 38:
     r0 = s.retval;
-    { step = 8; continue; }
-  case 5:
+    { step = 10; continue; }
+  case 7:
     s.tmp_2 = Sprite_x__P135893_mk(s);
-    s.tmp_2.arg0 = globals.Livreur___210311;
-    s.callLocIdx = 198; s.pc = 25; return s.tmp_2;
-  case 25:
+    s.tmp_2.arg0 = globals.Livreur___190892;
+    s.callLocIdx = 210; s.pc = 39; return s.tmp_2;
+  case 39:
     r0 = s.retval;
     s.tmp_1 = r0;
     s.tmp_4 = Sprite_x__P135893_mk(s);
-    s.tmp_4.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 199; s.pc = 26; return s.tmp_4;
-  case 26:
+    s.tmp_4.arg0 = globals.Calzone___191059;
+    s.callLocIdx = 211; s.pc = 40; return s.tmp_4;
+  case 40:
     r0 = s.retval;
     s.tmp_3 = r0;
     r0 = (s.tmp_1 > s.tmp_3);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 6; continue; }
+    if (!r0) { step = 8; continue; }
     s.tmp_5 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_5.arg0 = globals.Tiramisu___210415;
+    s.tmp_5.arg0 = globals.Tiramisu___190996;
     s.tmp_5.arg1 = 20;
     s.tmp_5.arg2 = 0;
-    s.callLocIdx = 200; s.pc = 27; return s.tmp_5;
-  case 27:
+    s.callLocIdx = 212; s.pc = 41; return s.tmp_5;
+  case 41:
     r0 = s.retval;
-  case 6:
-  case 7:
   case 8:
+  case 9:
+  case 10:
     s.tmp_0 = Sprite_setFlag__P135950_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
-    s.callLocIdx = 201; s.pc = 28; return s.tmp_0;
-  case 28:
+    s.callLocIdx = 213; s.pc = 42; return s.tmp_0;
+  case 42:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P136781_mk(s);
-    s.tmp_0.arg0 = globals.Tiramisu___210415;
+    s.tmp_0.arg0 = globals.Tiramisu___190996;
     s.tmp_1 = helpers_getAnimationByName__P136732_mk(s);
     s.tmp_1.arg0 = "tiramisuAnim";
-    s.callLocIdx = 202; s.pc = 30; return s.tmp_1;
-  case 30:
+    s.callLocIdx = 214; s.pc = 44; return s.tmp_1;
+  case 44:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 200;
     s.tmp_0.arg3 = true;
-    s.callLocIdx = 203; s.pc = 29; return s.tmp_0;
-  case 29:
+    s.callLocIdx = 215; s.pc = 43; return s.tmp_0;
+  case 43:
     r0 = s.retval;
-  case 9:
-  case 10:
   case 11:
   case 12:
+  case 13:
+  case 14:
+    s.tmp_0 = Sprite_setStayInScreen__P135948_mk(s);
+    s.tmp_0.arg0 = globals.Calzone___191059;
+    s.tmp_0.arg1 = true;
+    s.callLocIdx = 216; s.pc = 45; return s.tmp_0;
+  case 45:
+    r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P210639.info = {"start":6068,"length":779,"line":189,"column":28,"endLine":209,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P191221.info = {"start":6148,"length":1387,"line":190,"column":28,"endLine":229,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P210639_mk(s) {
+function inline__P191221_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P210639, depth: s.depth + 1,
+        parent: s, fn: inline__P191221, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3094,135 +3195,13 @@ function inline__P210639_mk(s) {
   tmp_13: undefined,
   tmp_14: undefined,
   tmp_15: undefined,
-} }
-
-
-
-
-
-function inline__P210700(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    r0 = pxsim.Math_.randomRange(0, 10);
-    globals.popCalzone___210472 = (r0);
-    r0 = (globals.popCalzone___210472 < globals.seuilPopCalzone___210400);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    s.tmp_1 = sprites_create__P135835_mk(s);
-    s.tmp_2 = helpers_getImageByName__P136731_mk(s);
-    s.tmp_2.arg0 = "calzone";
-    s.callLocIdx = 205; s.pc = 6; return s.tmp_2;
-  case 6:
-    r0 = s.retval;
-    s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.EnemyCalzone___210279;
-    s.callLocIdx = 206; s.pc = 5; return s.tmp_1;
-  case 5:
-    r0 = s.retval;
-    globals.Calzone___210478 = (r0);
-    s.tmp_0 = Sprite_setPosition__P135940_mk(s);
-    s.tmp_0.arg0 = globals.Calzone___210478;
-    s.tmp_0.arg1 = 0;
-    r0 = pxsim.Math_.randomRange(54, 120);
-    s.tmp_0.arg2 = r0;
-    s.callLocIdx = 207; s.pc = 7; return s.tmp_0;
-  case 7:
-    r0 = s.retval;
-    s.tmp_0 = animation_runImageAnimation__P136781_mk(s);
-    s.tmp_0.arg0 = globals.Calzone___210478;
-    s.tmp_1 = helpers_getAnimationByName__P136732_mk(s);
-    s.tmp_1.arg0 = "calzoneAnim";
-    s.callLocIdx = 208; s.pc = 9; return s.tmp_1;
-  case 9:
-    r0 = s.retval;
-    s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = 100;
-    s.tmp_0.arg3 = true;
-    s.callLocIdx = 209; s.pc = 8; return s.tmp_0;
-  case 8:
-    r0 = s.retval;
-    globals.seuilPopCalzone___210400 = (0);
-    s.tmp_0 = Sprite_sayText__P135943_mk(s);
-    s.tmp_0.arg0 = globals.Livreur___210311;
-    s.tmp_0.arg1 = "Les Calzone !!!";
-    s.tmp_0.arg2 = 1000;
-    s.tmp_0.arg3 = false;
-    s.tmp_0.arg4 = 15;
-    s.tmp_0.arg5 = 1;
-    s.callLocIdx = 210; s.pc = 10; return s.tmp_0;
-  case 10:
-    r0 = s.retval;
-  case 1:
-  case 2:
-    s.tmp_2 = Sprite_x__P135893_mk(s);
-    s.tmp_2.arg0 = globals.Calzone___210478;
-    s.callLocIdx = 211; s.pc = 11; return s.tmp_2;
-  case 11:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    s.tmp_5 = Sprite_x__P135893_mk(s);
-    s.tmp_5.arg0 = globals.Livreur___210311;
-    s.callLocIdx = 212; s.pc = 12; return s.tmp_5;
-  case 12:
-    r0 = s.retval;
-    s.tmp_4 = r0;
-    r0 = (s.tmp_4 - 25);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_1 > s.tmp_3);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 3; continue; }
-    s.tmp_6 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_6.arg0 = globals.Calzone___210478;
-    s.tmp_6.arg1 = -25;
-    r0 = pxsim.Math_.randomRange(-25, 25);
-    s.tmp_6.arg2 = r0;
-    s.callLocIdx = 213; s.pc = 13; return s.tmp_6;
-  case 13:
-    r0 = s.retval;
-    { step = 4; continue; }
-  case 3:
-    s.tmp_0 = Sprite_setVelocity__P135941_mk(s);
-    s.tmp_0.arg0 = globals.Calzone___210478;
-    s.tmp_0.arg1 = 15;
-    r0 = pxsim.Math_.randomRange(-25, 25);
-    s.tmp_0.arg2 = r0;
-    s.callLocIdx = 214; s.pc = 14; return s.tmp_0;
-  case 14:
-    r0 = s.retval;
-  case 4:
-    s.tmp_0 = Sprite_setStayInScreen__P135948_mk(s);
-    s.tmp_0.arg0 = globals.Calzone___210478;
-    s.tmp_0.arg1 = true;
-    s.callLocIdx = 215; s.pc = 15; return s.tmp_0;
-  case 15:
-    r0 = s.retval;
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-inline__P210700.info = {"start":6971,"length":628,"line":211,"column":28,"endLine":231,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
-
-function inline__P210700_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: inline__P210700, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
+  tmp_16: undefined,
+  tmp_17: undefined,
+  tmp_18: undefined,
+  tmp_19: undefined,
+  tmp_20: undefined,
+  tmp_21: undefined,
+  tmp_22: undefined,
 } }
 
 
@@ -65186,7 +65165,7 @@ const effects_SceneAnchor__C138974_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["transparency16___138156","Clientpizza___210264","ProjectilePizza___210267","ProjectileTiramisu___210270","ProjectileTiramisuPlayer___210273","ClientLivre___210276","EnemyCalzone___210279","PizzaFuel___210282","TiramisuFuel___210285","statusBarOfPizza___210295","Pizza___210300","Livreur___210311","xPizza___210314","yPizza___210320","vyPizza___210325","seuilPopCalzone___210400","statusBarOfTiramisu___210410","Tiramisu___210415","xTiramisu___210427","yTiramisu___210433","vxTiramisu___210438","vxBg___210495","yBarrier___210499","touchWall___210480","Calzone___210478","popClient___210476","seuilPopClient___210497","Client___210474","castTiramisu___210500","seuilCastTiramisu___210502","popCalzone___210472"])
+const breakpoints = setupDebugger(1, ["transparency16___138156","Clientpizza___190845","ProjectilePizza___190848","ProjectileTiramisu___190851","ProjectileTiramisuPlayer___190854","ClientLivre___190857","EnemyCalzone___190860","PizzaFuel___190863","TiramisuFuel___190866","statusBarOfPizza___190876","Pizza___190881","Livreur___190892","xPizza___190895","yPizza___190901","vyPizza___190906","seuilPopCalzone___190981","statusBarOfTiramisu___190991","Tiramisu___190996","xTiramisu___191008","yTiramisu___191014","vxTiramisu___191019","vxBg___191077","yBarrier___191081","touchWall___191061","Calzone___191059","popClient___191057","seuilPopClient___191079","Client___191055","popCalzone___191053","castTiramisu___191082","seuilCastTiramisu___191084"])
 
-return _main___P211130
+return _main___P191419
 })
