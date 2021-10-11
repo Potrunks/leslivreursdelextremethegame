@@ -122,12 +122,12 @@ game.splash("Les Livreurs de l'Extrême", "contre le clan Calzone")
 // Create a true starting page with the logo of Les Livreurs de l'Extrême
 // Create a introductive music
 game.splash("Comment jouer?")
-game.splash("Croix directionnelle", "pour bouger")
-game.splash("Bouton A", "pour livrer la pizza")
-game.splash("Bouton B", "pour envoyer du Tiramisu")
+game.splash("IKJL", "pour bouger")
+game.splash("Bouton Q", "pour livrer la pizza")
+game.splash("Bouton E", "pour envoyer du Tiramisu")
 game.splash("But: Livrer le plus", "de pizza")
 game.splash("sans se faire tuer", "par les Calzone")
-game.splash("Appuyez sur A", "pour commencer")
+game.splash("Appuyez sur Q", "pour commencer")
 info.startCountdown(30)
 info.setScore(0)
 // Background
@@ -144,7 +144,7 @@ assets.animation`scooterAnim`,
 100,
 true
 )
-controller.moveSprite(Livreur, 50, 50)
+controller.player2.moveSprite(Livreur, 50, 50)
 statusBarOfPizza = statusbars.create(10, 2, StatusBarKind.PizzaFuel)
 statusBarOfPizza.attachToSprite(Livreur)
 statusBarOfPizza.setOffsetPadding(-25, -35)
@@ -173,7 +173,7 @@ game.onUpdate(function () {
     }
 })
 // pop client
-game.onUpdateInterval(3000, function () {
+game.onUpdateInterval(1000, function () {
     popClient = randint(0, 10)
     if (popClient < seuilPopClient) {
         Client = sprites.create(assets.image`Client`, SpriteKind.Clientpizza)
@@ -183,12 +183,12 @@ game.onUpdateInterval(3000, function () {
     }
 })
 // Re-Fuel des jauges Pizza et Tiramisu
-game.onUpdateInterval(3000, function () {
+game.onUpdateInterval(5000, function () {
     statusBarOfPizza.value += 1
     statusBarOfTiramisu.value += 1
 })
 // pop Calzone (toutes les 3sec si joueur en face des calzone, tiramisu tiré par les calzone)
-game.onUpdateInterval(3000, function () {
+game.onUpdateInterval(2000, function () {
     popCalzone = randint(0, 10)
     if (popCalzone < seuilPopCalzone) {
         Calzone = sprites.create(assets.image`calzone`, SpriteKind.EnemyCalzone)
