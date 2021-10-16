@@ -101,7 +101,7 @@ let vyPizza = 0
 let yTiramisu = 0
 let xTiramisu = 0
 let vxTiramisu = 0
-let seuilPopCalzone = 6
+let seuilPopCalzone = 0
 let clientLivre = 0
 let Livreur: Sprite = null
 vxTiramisu = -50
@@ -154,6 +154,7 @@ statusBarOfTiramisu.attachToSprite(Livreur)
 statusBarOfTiramisu.setOffsetPadding(-25, -30)
 statusBarOfTiramisu.setColor(14, 2)
 statusBarOfTiramisu.max = 3
+seuilPopCalzone=6
 // Pour empecher le joueur et enemy d'aller au dela de la rambarde
 game.onUpdate(function () {
     if (Livreur.y <= yBarrier) {
@@ -167,9 +168,12 @@ game.onUpdate(function () {
         music.smallCrash.play()
         touchWall += 1
     }
-    if (Calzone.y <= yBarrier) {
-        Calzone.vy = 25
+    if (seuilPopCalzone==0) {
+        if (Calzone.y <= yBarrier) {
+            Calzone.vy = 25
+        }
     }
+
 })
 // pop client
 game.onUpdateInterval(2000, function () {
@@ -182,33 +186,36 @@ game.onUpdateInterval(2000, function () {
     }
 })
 // Re-Fuel des jauges Pizza et Tiramisu
-game.onUpdateInterval(5000, function () {
+game.onUpdateInterval(4000, function () {
     statusBarOfPizza.value += 1
     statusBarOfTiramisu.value += 1
 })
 // Tiramisu lancé par les Calzone
 game.onUpdateInterval(1000, function() {
-    castTiramisu = randint(0, 10)
-    if (castTiramisu < seuilCastTiramisu) {
-        if (Calzone.y > Livreur.y - 20 && Calzone.y < Livreur.y + 20 && seuilPopCalzone == 0) {
-            Tiramisu = sprites.create(assets.image`tiramisu`, SpriteKind.ProjectileTiramisu)
-            Tiramisu.setPosition(Calzone.x + 20, Calzone.y)
-            if (Livreur.x < Calzone.x) {
-                Tiramisu.setVelocity(-20, 0)
-            } else if (Livreur.x > Calzone.x) {
-                Tiramisu.setVelocity(20, 0)
+    if (seuilPopCalzone==0) {
+        castTiramisu = randint(0, 10)
+        if (castTiramisu < seuilCastTiramisu) {
+            if (Calzone.y > Livreur.y - 20 && Calzone.y < Livreur.y + 20) {
+                Tiramisu = sprites.create(assets.image`tiramisu`, SpriteKind.ProjectileTiramisu)
+                Tiramisu.setPosition(Calzone.x + 20, Calzone.y)
+                if (Livreur.x < Calzone.x) {
+                    Tiramisu.setVelocity(-20, 0)
+                } else if (Livreur.x > Calzone.x) {
+                    Tiramisu.setVelocity(20, 0)
+                }
+                Tiramisu.setFlag(SpriteFlag.AutoDestroy, true)
+                animation.runImageAnimation(
+                    Tiramisu,
+                    assets.animation`tiramisuAnim`,
+                    200,
+                    true
+                )
             }
-            Tiramisu.setFlag(SpriteFlag.AutoDestroy, true)
-            animation.runImageAnimation(
-                Tiramisu,
-                assets.animation`tiramisuAnim`,
-                200,
-                true
-            )
         }
     }
+    
 })
-// pop Calzone (toutes les 3sec si joueur en face des calzone, tiramisu tiré par les calzone)
+// pop Calzone
 game.onUpdateInterval(2000, function () {
     popCalzone = randint(0, 10)
     if (popCalzone < seuilPopCalzone) {
@@ -223,10 +230,12 @@ game.onUpdateInterval(2000, function () {
         seuilPopCalzone = 0
         Livreur.sayText("Les Calzone !!!", 1000, false)
     }
-    if (Calzone.x > Livreur.x - 25) {
-        Calzone.setVelocity(-25, randint(-25, 25))
-    } else {
-        Calzone.setVelocity(15, randint(-25, 25))
+    if (seuilPopCalzone==0) {
+        if (Calzone.x > Livreur.x) {
+            Calzone.setVelocity(-25, randint(-25, 25))
+        } else if (Calzone.x < Livreur.x) {
+            Calzone.setVelocity(15, randint(-25, 25))
+        }
+        Calzone.setStayInScreen(true)
     }
-    Calzone.setStayInScreen(true)
 })
